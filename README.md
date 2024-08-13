@@ -8,3 +8,8 @@ vscode+platformIO(arduino)
 * ssd1306 oled(IIC)
 * esp8266
 
+## GPIO
+* SCL: D1
+* SDA: D2
+* Key_left: D5
+* Key_right: D6
