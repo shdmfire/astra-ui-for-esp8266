@@ -60,8 +60,8 @@ public:
 //  void _beepStop() override;
 //  void _setBeepVol(uint8_t _vol) override;
 
-//public:
-//  bool _getKey(key::KEY_INDEX _keyIndex) override;
+public:
+  bool _getKey(key::KEY_INDEX _keyIndex) override;
 
 //public:
 //  void _updateConfig() override;

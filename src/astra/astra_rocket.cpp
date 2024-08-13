@@ -21,18 +21,18 @@ void astraCoreInit(void) {
   HAL::inject(new MyHAL);
 
   HAL::Delay(350);
-  astra::drawLogo(300);
+  astra::drawLogo(240);
   rootPage->addItem(new astra::List("test1"));
   rootPage->addItem(new astra::List("测试2"));
   rootPage->addItem(new astra::List("测试测试3"));
   rootPage->addItem(new astra::List("测试测试3"));
   rootPage->addItem(secondPage);
 
-  //secondPage->addItem(new astra::List());
-  //secondPage->addItem(new astra::List("-测试2"), new astra::CheckBox(test));
-  //secondPage->addItem(new astra::Tile("-测试测试3"), new astra::PopUp(1, "测试", {"测试"}, testIndex));
-  //secondPage->addItem(new astra::Tile("-测试测试测试4"), new astra::Slider("测试", 0, 100, 50, testSlider));
-  //secondPage->addItem(new astra::List("-测试测试测试5"));
+  secondPage->addItem(new astra::List());
+  secondPage->addItem(new astra::List("-测试2"), new astra::CheckBox(test));
+  secondPage->addItem(new astra::Tile("-测试测试3"), new astra::PopUp(1, "测试", {"测试"}, testIndex));
+  secondPage->addItem(new astra::Tile("-测试测试测试4"), new astra::Slider("测试", 0, 100, 50, testSlider));
+  secondPage->addItem(new astra::List("-测试测试测试5"));
   //secondPage->addItem(new astra::List("-测试测试测试6"));
   //secondPage->addItem(new astra::List("-测试测试测试6"));
   //secondPage->addItem(new astra::List("-测试测试测试6"));
@@ -46,11 +46,13 @@ void astraCoreInit(void) {
 }
 
 void astraCoreStart(void) {
-  for (int i=0;i<=1000; i++) {  //NOLINT
+  //int i = 0;
+  for (;;) {  //NOLINT
     astraLauncher->update();
-  //  Serial.begin(9600);
-  //  Serial.println(i);
-    delay(10);
+    Serial.begin(9600);
+    //i++;
+    //Serial.println(i);
+    delay(1);
   }
 }
 

@@ -30,7 +30,7 @@ void drawLogo(uint16_t _time) {
   while(onRender) {
     time++;
 
-HAL::Delay(10);
+HAL::Delay(1);
 
     static std::vector<float> yStars;
     static std::vector<float> yStarsTrg;

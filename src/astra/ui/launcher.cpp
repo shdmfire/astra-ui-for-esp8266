@@ -157,10 +157,11 @@ void Launcher::update() {
 //  if (time == 3200) selector->go(0);  //test
 //  if (time >= 3250) time = 0;  //test
 
-//  if (time > 2) {
-//    HAL::keyScan();
-//    time = 0;
-//  }
+  if (time > 2) {
+    //HAL::log("0001");
+    HAL::keyScan();
+    time = 0;
+  }
   if (*HAL::getKeyFlag() == key::KEY_PRESSED) {
     *HAL::getKeyFlag() = key::KEY_NOT_PRESSED;
     for (unsigned char i = 0; i < key::KEY_NUM; i++) {
@@ -178,6 +179,6 @@ void Launcher::update() {
   HAL::canvasUpdate();
 
   //time++;
-//  time = HAL::Millis() / 1000;
+  time = HAL::Millis() / 1000;
 }
 }
